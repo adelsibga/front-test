@@ -1,0 +1,21 @@
+@import 'const';
+
+$defaultFont: Arial, sans-serif;
+
+.title {
+  &_h1 {
+    font: 400 48px/1.26 $defaultFont;
+  }
+
+  &_h2 {
+    font: 400 36px/1.26 $defaultFont;
+  }
+
+  &_h3 {
+    font: 400 24px/1.26 $defaultFont;
+  }
+}
+
+.text {
+  font: 400 18px/1.26 $defaultFont;
+}

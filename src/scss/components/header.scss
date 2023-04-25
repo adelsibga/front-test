@@ -1,0 +1,57 @@
+@import '../config/fonts';
+@import '../config/const';
+
+.container_header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.header {
+  min-height: 80px;
+  border-bottom: 1px solid $textColor;
+
+  &__nav-link {
+    text-decoration: none;
+    color: $titleColor;
+  }
+
+  &__cart {
+    font: 400 16px/1.27 $defaultFont;
+    position: relative;
+    text-decoration: none;
+    color: $textColor;
+
+    &::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 16px;
+      content: '';
+      background-image: url('../images/shopping-cart.svg');
+    }
+  }
+
+  &__cart-items-counter {
+    font-family: Euclid Circular B, Roboto, sans-serif;
+    font-size: 9px;
+    line-height: 1;
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    display: none;
+    min-width: 16px;
+    height: 12px;
+    padding: 0 2px;
+    text-align: center;
+    color: #FFFFFF;
+    border: 1px solid #FFFFFF;
+    border-radius: 30px;
+    background-color: #FA0F55;
+    box-shadow: 0 0 1px #FFFFFF;
+  }
+}

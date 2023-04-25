@@ -1,0 +1,30 @@
+{% extends 'templates/layout.twig' %}
+
+{% set title = 'Home' %}
+{% set description = 'Gulp template for development' %}
+
+{% block content %}
+    <section class="catalog">
+        <div class="catalog__filters">
+            <h2 class="title_h2 catalog__title">
+                Бренды
+            </h2>
+            <nav>
+                <ul>
+                    <li class="filter text" data-f="1">Brand 1</li>
+                    <li class="filter text" data-f="2">Brand 2</li>
+                    <li class="filter text" data-f="3">Brand 3</li>
+                    <li class="filter text" data-f="4">Brand 4</li>
+                    <li class="filter text" data-f="all">All</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="catalog__items-list"></div>
+    </section>
+    <div class="pagination"></div>
+{% endblock %}
+
+{% block scripts %}
+    <script type="module" src="./js/pagination.js"></script>
+    <script type="module" src="./js/filter.js"></script>
+{% endblock %}

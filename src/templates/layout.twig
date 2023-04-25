@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>{% if title %}{{ title }}{% else %}Title{% endif %}</title>
+        <meta name="description"
+              content="{% if description %}{{ description }}{% else %}Description{% endif %}">
+        <link rel="icon" href="{% if faviconUrl %}{{ faviconUrl }}{% else %}./images/favicon/favicon.ico{% endif %}" type="image/x-icon">
+        <link rel="stylesheet" href="./css/index.min.css">
+        {% block styles %}{% endblock %}
+    </head>
+    <body>
+        <div class="wrapper">
+            {% include '../components/header.twig' %}
+            <main class="main container container_main">
+                {% block content %}{% endblock %}
+            </main>
+            {% include '../components/footer.twig' %}
+            <script type="module" src="./js/index.js"></script>
+            <script type="module" src="./js/cardServices.js"></script>
+            <script type="module" src="./js/cart.js"></script>
+            {% block scripts %}{% endblock %}
+        </div>
+    </body>
+</html>
